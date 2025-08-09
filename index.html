@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Nyamugada - Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <style>
+        /* CSS remains unchanged from original */
+        :root {
+            --dark-bg: #0f0f15;
+            --card-bg: #161622;
+            --accent-purple: #8a2be2;
+            --accent-lime: #32cd32;
+            --accent-blue: #1e90ff;
+            --accent-orange: #ff7b00;
+            --accent-pink: #ff6b9d;
+            --accent-cyan: #00d1ff;
+            --light-text: #f0f0f0;
+            --gray-text: #a0a0b0;
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --whatsapp-green: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ... (All other CSS remains exactly the same) ... */
+        
+        /* Language toggle active state */
+        .language-toggle.active {
+            background: rgba(138, 43, 226, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">RobertDev</a>
+            <div class="mobile-nav-container">
+                <button class="language-toggle" id="languageToggle">RU</button>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="translate" data-key="nav_about">About</a></li>
+                    <li><a href="#skills" class="translate" data-key="nav_skills">Skills</a></li>
+                    <li><a href="#pricing" class="translate" data-key="nav_prices">Prices</a><li>
+                    <li><a href="#projects" class="translate" data-key="nav_projects">Projects</a></li>
+                    <li><a href="#roadmap" class="translate" data-key="nav_process">Process</a></li>
+                    <li><a href="#contact" class="translate" data-key="nav_contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+        <div class="container hero-content">
+            <div class="animate">
+                <h1 class="translate" data-key="hero_title">Digital Solutions Expert</h1>
+                <p class="translate" data-key="hero_subtitle">I'm <span class="hero-highlight">Robert Nyamugada</span>, a web developer with <span class="hero-highlight">4+ years</span> experience creating exceptional digital experiences across 30+ successful projects.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary translate" data-key="hero_btn_work">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary translate" data-key="hero_btn_contact">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="translate" data-key="about_title">About Me</h2>
+                <p class="translate" data-key="about_subtitle">Professional web developer creating modern digital solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text animate">
+                    <p class="translate" data-key="about_text1">I'm a Moscow-based web developer specializing in responsive websites and applications. With expertise in both frontend and backend technologies, I deliver solutions that drive business success.</p>
+                    <p class="translate" data-key="about_text2">My approach blends technical skills with UX understanding to create functional, beautiful digital products.</p>
+                    <p class="translate" data-key="about_text3">I hold a <span class="highlight">B.Sc. in Software Development</span> from the University of British Columbia and am pursuing my <span class="highlight">M.Sc. in Web Development</span> at MISIS. Certified by the Linux Foundation Institute.</p>
+                </div>
+                <div class="about-cards">
+                    <div class="card animate delay-1">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>4+ <span class="translate" data-key="years">Years</span></h4>
+                        <p class="translate" data-key="experience">Experience</p>
+                    </div>
+                    <div class="card animate delay-2">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>30+</h4>
+                        <p class="translate" data-key="projects">Projects</p>
+                    </div>
+                    <div class="card animate delay-3">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>B.Sc.</h4>
+                        <p class="translate" data-key="software_dev">Software Dev</p>
+                    </div>
+                    <div class="card animate delay-4">
+                        <i class="fas fa-book"></i>
+                        <h4>M.Sc.</h4>
+                        <p class="translate" data-key="in_progress">In Progress</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="translate" data-key="skills_title">Skills & Expertise</h2>
+                <p class="translate" data-key="skills_subtitle">Comprehensive technical skills across platforms, languages, and project types</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category animate">
+                    <h3><i class="fas fa-layer-group"></i> <span class="translate" data-key="platforms">Platforms</span></h3>
+                    <ul class="skill-list">
+                        <li>Tilda</li>
+                        <li>WordPress</li>
+                        <li>Joomla</li>
+                        <li>Bitrix24</li>
+                        <li>Shopify</li>
+                        <li>Netlify</li>
+                        <li>Vercel</li>
+                        <li>GitHub</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <div class="skill-category animate delay-1">
+                    <h3><i class="fas fa-code"></i> <span class="translate" data-key="languages">Languages & Frameworks</span></h3>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                        <li>C#</li>
+                        <li>JavaScript</li>
+                        <li>CSS/SASS</li>
+                        <li>HTML5</li>
+                        <li>Dart (Flutter)</li>
+                        <li>Flask (Python)</li>
+                        <li>TypeScript</li>
+                        <li>Next.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category animate delay-2">
+                    <h3><i class="fas fa-cubes"></i> <span class="translate" data-key="project_types">Project Types</span></h3>
+                    <ul class="skill-list">
+                        <li class="translate" data-key="web_apps">Web Apps</li>
+                        <li class="translate" data-key="business_sites">Business Sites</li>
+                        <li class="translate" data-key="ecommerce">E-commerce</li>
+                        <li class="translate" data-key="landing_pages">Landing Pages</li>
+                        <li class="translate" data-key="advertising">Advertising</li>
+                        <li class="translate" data-key="figma">Figma Prototypes</li>
+                        <li class="translate" data-key="mobile_apps">Mobile Apps</li>
+                        <li class="translate" data-key="api">API Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="translate" data-key="pricing_title">Prices & Services</h2>
+                <p class="translate" data-key="pricing_subtitle">Transparent pricing for common digital solutions</p>
+            </div>
+            
+            <div class="pricing-cards">
+                <!-- Service 1 -->
+                <div class="pricing-card">
+                    <h3 class="translate" data-key="service_landing">Landing Page</h3>
+                    <div class="price translate" data-key="price_from65">from $65</div>
+                    <a href="https://wa.me/79104483756" class="btn btn-primary translate" data-key="order_now" target="_blank">Order Now</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="pricing-card">
+                    <h3 class="translate" data-key="service_shop">Online Shop</h3>
+                    <div class="price translate" data-key="inquire">Inquire</div>
+                    <a href="https://wa.me/79104483756" class="btn btn-secondary translate" data-key="request_price" target="_blank">Request Price</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="pricing-card">
+                    <h3 class="translate" data-key="service_mobile">Mobile App</h3>
+                    <div class="price translate" data-key="inquire">Inquire</div>
+                    <a href="https://wa.me/79104483756" class="btn btn-secondary translate" data-key="request_price" target="_blank">Request Price</a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="pricing-card">
+                    <h3 class="translate" data-key="service_multipage">Multi-Pages Website</h3>
+                    <div class="price translate" data-key="inquire">Inquire</div>
+                    <a href="https://wa.me/79104483756" class="btn btn-secondary translate" data-key="request_price" target="_blank">Request Price</a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="pricing-card">
+                    <h3 class="translate" data-key="service_bots">Telegram Bots</h3>
+                    <div class="price translate" data-key="inquire">Inquire</div>
+                    <a href="https://wa.me/79104483756" class="btn btn-secondary translate" data-key="inquire_whatsapp" target="_blank">Inquire on WhatsApp</a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="pricing-card">
+                    <h3 class="translate" data-key="service_figma">Figma Design Prototype</h3>
+                    <div class="price translate" data-key="price_from50">from $50</div>
+                    <a href="https://wa.me/79104483756" class="btn btn-primary translate" data-key="order_now" target="_blank">Order Now</a>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="pricing-card">
+                    <h3 class="translate" data-key="service_webapp">WebApp</h3>
+                    <div class="price translate" data-key="request_price">Request Price</div>
+                    <a href="https://wa.me/79104483756" class="btn btn-secondary translate" data-key="get_quote" target="_blank">Get Quote</a>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="pricing-card">
+                    <h3 class="translate" data-key="service_portfolio">Portfolio Site</h3>
+                    <div class="price translate" data-key="inquire">Inquire</div>
+                    <a href="https://wa.me/79104483756" class="btn btn-secondary translate" data-key="request_price" target="_blank">Request Price</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="translate" data-key="projects_title">Featured Projects</h2>
+                <p class="translate" data-key="projects_subtitle">Recent projects showcasing my skills and passion for web development</p>
+            </div>
+            
+            <div class="featured-projects">
+                <!-- Project 1 -->
+                <div class="project-card animate">
+                    <div class="project-preview">
+                        <img src="https://raw.githubusercontent.com/robthedeer/WebDev_Portifolio_Robert/refs/heads/main/aii.webp" alt="International Calling App">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MerekiCall - <span class="translate" data-key="project1_title">International Calling</span></h3>
+                        <p class="project-description translate" data-key="project1_desc">Web application for international calling with competitive rates, user dashboard, and payment integration.</p>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe API</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://merekicall.vercel.app/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> <span class="translate" data-key="live_demo">Live Demo</span>
+                            </a>
+                            <a href="https://wa.me/79104483756" class="btn btn-secondary btn-small">
+                                <i class="fas fa-shopping-cart"></i> <span class="translate" data-key="order">Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Project 2 -->
+                <div class="project-card animate delay-1">
+                    <div class="project-preview">
+                        <img src="https://raw.githubusercontent.com/robthedeer/WebDev_Portifolio_Robert/refs/heads/main/5web.webp" alt="Programming School">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">QESAixul - <span class="translate" data-key="project2_title">Programming School</span></h3>
+                        <p class="project-description translate" data-key="project2_desc">Learning platform with course management, progress tracking, and coding environment.</p>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">GraphQL</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://qesaixul.ru/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> <span class="translate" data-key="live_demo">Live Demo</span>
+                            </a>
+                            <a href="https://wa.me/79104483756" class="btn btn-secondary btn-small">
+                                <i class="fas fa-shopping-cart"></i> <span class="translate" data-key="order">Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Project 3 -->
+                <div class="project-card animate delay-2">
+                    <div class="project-preview">
+                        <img src="https://raw.githubusercontent.com/robthedeer/WebDev_Portifolio_Robert/refs/heads/main/a1.webp" alt="Research Consultancy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title translate" data-key="project3_title">Scroggs Research Consultancy</h3>
+                        <p class="project-description translate" data-key="project3_desc">Corporate website with client portal, service management, and publication database.</p>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://scroggsres.vercel.app/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> <span class="translate" data-key="live_demo">Live Demo</span>
+                            </a>
+                            <a href="https://wa.me/79104483756" class="btn btn-secondary btn-small">
+                                <i class="fas fa-shopping-cart"></i> <span class="translate" data-key="order">Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Project 4 -->
+                <div class="project-card animate">
+                    <div class="project-preview">
+                        <img src="https://raw.githubusercontent.com/robthedeer/WebDev_Portifolio_Robert/refs/heads/main/b.webp" alt="B2B Company">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CM Services - <span class="translate" data-key="project4_title">B2B Company</span></h3>
+                        <p class="project-description translate" data-key="project4_desc">B2B service platform with client management, project tracking, and invoicing.</p>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://cmservices.vercel.app/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> <span class="translate" data-key="live_demo">Live Demo</span>
+                            </a>
+                            <a href="https://wa.me/79104483756" class="btn btn-secondary btn-small">
+                                <i class="fas fa-shopping-cart"></i> <span class="translate" data-key="order">Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Project 5 -->
+                <div class="project-card animate delay-1">
+                    <div class="project-preview">
+                        <img src="https://raw.githubusercontent.com/robthedeer/WebDev_Portifolio_Robert/refs/heads/main/iv.webp" alt="Premium Coaching">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title translate" data-key="project5_title">English- Premium Coaching from Expert</h3>
+                        <p class="project-description translate" data-key="project5_desc">Online coaching platform with video lessons, progress tracking, and learning paths.</p>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Video.js</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://pteng.vercel.app/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> <span class="translate" data-key="live_demo">Live Demo</span>
+                            </a>
+                            <a href="https://wa.me/79104483756" class="btn btn-secondary btn-small">
+                                <i class="fas fa-shopping-cart"></i> <span class="translate" data-key="order">Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Project 6 -->
+                <div class="project-card animate delay-2">
+                    <div class="project-preview">
+                        <img src="https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Florist Website">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Pogosti - <span class="translate" data-key="project6_title">Florist Website</span></h3>
+                        <p class="project-description translate" data-key="project6_desc">E-commerce solution with inventory management, delivery scheduling, and payments.</p>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">Shopify</span>
+                            <span class="tech-tag">Liquid</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PayPal API</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://pogosti.pro/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> <span class="translate" data-key="live_demo">Live Demo</span>
+                            </a>
+                            <a href="https://wa.me/79104483756" class="btn btn-secondary btn-small">
+                                <i class="fas fa-shopping-cart"></i> <span class="translate" data-key="order">Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="translate" data-key="process_title">Development Process</h2>
+                <p class="translate" data-key="process_subtitle">Structured approach to delivering exceptional digital solutions</p>
+            </div>
+            <div class="process-container">
+                <div class="process-line"></div>
+                <div class="process-steps">
+                    <!-- Step 1 -->
+                    <div class="process-step animate">
+                        <div class="step-indicator">1</div>
+                        <h3><i class="fas fa-clipboard-list"></i> <span class="translate" data-key="step1_title">Requirement Analysis</span></h3>
+                        <p class="translate" data-key="step1_desc">We start by discussing your project requirements, goals, and target audience to create a detailed project plan that aligns with your vision.</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="process-step animate delay-1">
+                        <div class="step-indicator">2</div>
+                        <h3><i class="fas fa-palette"></i> <span class="translate" data-key="step2_title">Design & Prototyping</span></h3>
+                        <p class="translate" data-key="step2_desc">I create wireframes and design prototypes in Figma, ensuring the user experience aligns with your business objectives and brand identity.</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="process-step animate delay-2">
+                        <div class="step-indicator">3</div>
+                        <h3><i class="fas fa-laptop-code"></i> <span class="translate" data-key="step3_title">Development Phase</span></h3>
+                        <p class="translate" data-key="step3_desc">Using modern technologies and best practices, I develop your website/application with clean, maintainable code and responsive design.</p>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="process-step animate delay-3">
+                        <div class="step-indicator">4</div>
+                        <h3><i class="fas fa-bug"></i> <span class="translate" data-key="step4_title">Testing & Refinement</span></h3>
+                        <p class="translate" data-key="step4_desc">Rigorous testing across devices and browsers to ensure optimal performance, security, and user experience before launch.</p>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="process-step animate delay-4">
+                        <div class="step-indicator">5</div>
+                        <h3><i class="fas fa-rocket"></i> <span class="translate" data-key="step5_title">Deployment & Launch</span></h3>
+                        <p class="translate" data-key="step5_desc">Final deployment to your hosting platform with full support during the launch phase to ensure a smooth transition.</p>
+                    </div>
+                    
+                    <!-- Step 6 -->
+                    <div class="process-step animate delay-5">
+                        <div class="step-indicator">6</div>
+                        <h3><i class="fas fa-cogs"></i> <span class="translate" data-key="step6_title">Maintenance & Support</span></h3>
+                        <p class="translate" data-key="step6_desc">Ongoing support and maintenance to keep your digital product running smoothly with updates and improvements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="translate" data-key="contact_title">Get In Touch</h2>
+                <p class="translate" data-key="contact_subtitle">Let's work together to bring your vision to life</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item animate">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="translate" data-key="location">Location</h4>
+                            <p>Moscow, Russia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item animate delay-1">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="translate" data-key="phone">Phone</h4>
+                            <p>+7 (910) 448-37-56</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item animate delay-2">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Telegram</h4>
+                            <p>@rob_the_deer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item animate delay-3">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>robertnyamugada@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-buttons animate delay-4">
+                    <a href="https://wa.me/79104483756" class="btn btn-whatsapp btn-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="tel:+79104483756" class="btn btn-call btn-contact">
+                        <i class="fas fa-phone"></i> <span class="translate" data-key="call_now">Call Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Robert Nyamugada</h3>
+            <p class="translate" data-key="footer_title">Web Developer & Digital Solutions Specialist</p>
+            
+            <div class="social-links">
+                <a href="https://t.me/rob_the_deer" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://wa.me/79104483756" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:robertnyamugada@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <p class="copyright">&copy; 2023 Robert Nyamugada. <span class="translate" data-key="rights">All Rights Reserved</span>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Translation dictionary
+        const translations = {
+            en: {
+                // Navigation
+                "nav_about": "About",
+                "nav_skills": "Skills",
+                "nav_prices": "Prices",
+                "nav_projects": "Projects",
+                "nav_process": "Process",
+                "nav_contact": "Contact",
+                
+                // Hero section
+                "hero_title": "Digital Solutions Expert",
+                "hero_subtitle": "I'm <span class='hero-highlight'>Robert Nyamugada</span>, a web developer with <span class='hero-highlight'>4+ years</span> experience creating exceptional digital experiences across 30+ successful projects.",
+                "hero_btn_work": "View My Work",
+                "hero_btn_contact": "Contact Me",
+                
+                // About section
+                "about_title": "About Me",
+                "about_subtitle": "Professional web developer creating modern digital solutions",
+                "about_text1": "I'm a Moscow-based web developer specializing in responsive websites and applications. With expertise in both frontend and backend technologies, I deliver solutions that drive business success.",
+                "about_text2": "My approach blends technical skills with UX understanding to create functional, beautiful digital products.",
+                "about_text3": "I hold a <span class='highlight'>B.Sc. in Software Development</span> from the University of British Columbia and am pursuing my <span class='highlight'>M.Sc. in Web Development</span> at MISIS. Certified by the Linux Foundation Institute.",
+                "years": "Years",
+                "experience": "Experience",
+                "projects": "Projects",
+                "software_dev": "Software Dev",
+                "in_progress": "In Progress",
+                
+                // Skills section
+                "skills_title": "Skills & Expertise",
+                "skills_subtitle": "Comprehensive technical skills across platforms, languages, and project types",
+                "platforms": "Platforms",
+                "languages": "Languages & Frameworks",
+                "project_types": "Project Types",
+                "web_apps": "Web Apps",
+                "business_sites": "Business Sites",
+                "ecommerce": "E-commerce",
+                "landing_pages": "Landing Pages",
+                "advertising": "Advertising",
+                "figma": "Figma Prototypes",
+                "mobile_apps": "Mobile Apps",
+                "api": "API Development",
+                
+                // Pricing section
+                "pricing_title": "Prices & Services",
+                "pricing_subtitle": "Transparent pricing for common digital solutions",
+                "service_landing": "Landing Page",
+                "service_shop": "Online Shop",
+                "service_mobile": "Mobile App",
+                "service_multipage": "Multi-Pages Website",
+                "service_bots": "Telegram Bots",
+                "service_figma": "Figma Design Prototype",
+                "service_webapp": "WebApp",
+                "service_portfolio": "Portfolio Site",
+                "price_from65": "from $65",
+                "price_from50": "from $50",
+                "inquire": "Inquire",
+                "order_now": "Order Now",
+                "request_price": "Request Price",
+                "inquire_whatsapp": "Inquire on WhatsApp",
+                "get_quote": "Get Quote",
+                
+                // Projects section
+                "projects_title": "Featured Projects",
+                "projects_subtitle": "Recent projects showcasing my skills and passion for web development",
+                "project1_title": "International Calling",
+                "project1_desc": "Web application for international calling with competitive rates, user dashboard, and payment integration.",
+                "project2_title": "Programming School",
+                "project2_desc": "Learning platform with course management, progress tracking, and coding environment.",
+                "project3_title": "Research Consultancy",
+                "project3_desc": "Corporate website with client portal, service management, and publication database.",
+                "project4_title": "B2B Company",
+                "project4_desc": "B2B service platform with client management, project tracking, and invoicing.",
+                "project5_title": "English- Premium Coaching from Expert",
+                "project5_desc": "Online coaching platform with video lessons, progress tracking, and learning paths.",
+                "project6_title": "Florist Website",
+                "project6_desc": "E-commerce solution with inventory management, delivery scheduling, and payments.",
+                "live_demo": "Live Demo",
+                "order": "Order",
+                
+                // Process section
+                "process_title": "Development Process",
+                "process_subtitle": "Structured approach to delivering exceptional digital solutions",
+                "step1_title": "Requirement Analysis",
+                "step1_desc": "We start by discussing your project requirements, goals, and target audience to create a detailed project plan that aligns with your vision.",
+                "step2_title": "Design & Prototyping",
+                "step2_desc": "I create wireframes and design prototypes in Figma, ensuring the user experience aligns with your business objectives and brand identity.",
+                "step3_title": "Development Phase",
+                "step3_desc": "Using modern technologies and best practices, I develop your website/application with clean, maintainable code and responsive design.",
+                "step4_title": "Testing & Refinement",
+                "step4_desc": "Rigorous testing across devices and browsers to ensure optimal performance, security, and user experience before launch.",
+                "step5_title": "Deployment & Launch",
+                "step5_desc": "Final deployment to your hosting platform with full support during the launch phase to ensure a smooth transition.",
+                "step6_title": "Maintenance & Support",
+                "step6_desc": "Ongoing support and maintenance to keep your digital product running smoothly with updates and improvements.",
+                
+                // Contact section
+                "contact_title": "Get In Touch",
+                "contact_subtitle": "Let's work together to bring your vision to life",
+                "location": "Location",
+                "phone": "Phone",
+                "call_now": "Call Now",
+                
+                // Footer
+                "footer_title": "Web Developer & Digital Solutions Specialist",
+                "rights": "All Rights Reserved"
+            },
+            ru: {
+                // Navigation
+                "nav_about": "Обо мне",
+                "nav_skills": "Навыки",
+                "nav_prices": "Цены",
+                "nav_projects": "Проекты",
+                "nav_process": "Процесс",
+                "nav_contact": "Контакты",
+                
+                // Hero section
+                "hero_title": "Эксперт по цифровым решениям",
+                "hero_subtitle": "Я <span class='hero-highlight'>Роберт Ньямугада</span>, веб-разработчик с <span class='hero-highlight'>4+ годами</span> опыта, создающий исключительные цифровые решения в более чем 30 успешных проектах.",
+                "hero_btn_work": "Мои работы",
+                "hero_btn_contact": "Связаться",
+                
+                // About section
+                "about_title": "Обо мне",
+                "about_subtitle": "Профессиональный веб-разработчик современных цифровых решений",
+                "about_text1": "Я веб-разработчик из Москвы, специализирующийся на адаптивных сайтах и приложениях. Благодаря опыту работы с фронтендом и бэкендом, я создаю решения для успеха вашего бизнеса.",
+                "about_text2": "Мой подход сочетает технические навыки с пониманием UX для создания функциональных и красивых цифровых продуктов.",
+                "about_text3": "У меня есть <span class='highlight'>B.Sc. по разработке ПО</span> Университета Британской Колумбии, и я получаю <span class='highlight'>M.Sc. по веб-разработке</span> в МИСиС. Сертифицирован Linux Foundation Institute.",
+                "years": "Года",
+                "experience": "Опыт",
+                "projects": "Проектов",
+                "software_dev": "Разработка ПО",
+                "in_progress": "В процессе",
+                
+                // Skills section
+                "skills_title": "Навыки и экспертиза",
+                "skills_subtitle": "Комплексные технические навыки в платформах, языках и типах проектов",
+                "platforms": "Платформы",
+                "languages": "Языки и фреймворки",
+                "project_types": "Типы проектов",
+                "web_apps": "Веб-приложения",
+                "business_sites": "Сайты для бизнеса",
+                "ecommerce": "Интернет-магазины",
+                "landing_pages": "Лендинги",
+                "advertising": "Реклама",
+                "figma": "Прототипы Figma",
+                "mobile_apps": "Мобильные приложения",
+                "api": "Разработка API",
+                
+                // Pricing section
+                "pricing_title": "Цены и услуги",
+                "pricing_subtitle": "Прозрачные цены на популярные цифровые решения",
+                "service_landing": "Лендинг",
+                "service_shop": "Интернет-магазин",
+                "service_mobile": "Мобильное приложение",
+                "service_multipage": "Многостраничный сайт",
+                "service_bots": "Телеграм боты",
+                "service_figma": "Прототип в Figma",
+                "service_webapp": "Веб-приложение",
+                "service_portfolio": "Сайт-портфолио",
+                "price_from65": "от $65",
+                "price_from50": "от $50",
+                "inquire": "Уточнить",
+                "order_now": "Заказать сейчас",
+                "request_price": "Узнать цену",
+                "inquire_whatsapp": "Уточнить в WhatsApp",
+                "get_quote": "Получить расчет",
+                
+                // Projects section
+                "projects_title": "Избранные проекты",
+                "projects_subtitle": "Недавние проекты, демонстрирующие мои навыки и страсть к веб-разработке",
+                "project1_title": "Международные звонки",
+                "project1_desc": "Веб-приложение для международных звонков с конкурентными тарифами, пользовательской панелью и платежной интеграцией.",
+                "project2_title": "Школа программирования",
+                "project2_desc": "Платформа для обучения с управлением курсами, отслеживанием прогресса и средой для программирования.",
+                "project3_title": "Исследовательский консалтинг",
+                "project3_desc": "Корпоративный сайт с клиентским порталом, управлением услугами и базой публикаций.",
+                "project4_title": "B2B компания",
+                "project4_desc": "B2B платформа услуг с управлением клиентами, отслеживанием проектов и выставлением счетов.",
+                "project5_title": "Премиум коучинг по английскому",
+                "project5_desc": "Онлайн-платформа коучинга с видеоуроками, отслеживанием прогресса и учебными планами.",
+                "project6_title": "Сайт флориста",
+                "project6_desc": "E-commerce решение с управлением запасами, планированием доставки и платежами.",
+                "live_demo": "Демо",
+                "order": "Заказать",
+                
+                // Process section
+                "process_title": "Процесс разработки",
+                "process_subtitle": "Структурированный подход к созданию выдающихся цифровых решений",
+                "step1_title": "Анализ требований",
+                "step1_desc": "Начинаем с обсуждения ваших требований, целей и целевой аудитории для создания детального плана проекта.",
+                "step2_title": "Дизайн и прототипирование",
+                "step2_desc": "Создаю макеты и прототипы в Figma, обеспечивая соответствие пользовательского опыта вашим бизнес-целям и идентичности бренда.",
+                "step3_title": "Этап разработки",
+                "step3_desc": "Используя современные технологии и лучшие практики, разрабатываю ваш сайт/приложение с чистым поддерживаемым кодом и адаптивным дизайном.",
+                "step4_title": "Тестирование и доработка",
+                "step4_desc": "Тщательное тестирование на разных устройствах и браузерах для обеспечения оптимальной производительности, безопасности и пользовательского опыта перед запуском.",
+                "step5_title": "Развертывание и запуск",
+                "step5_desc": "Финальное развертывание на вашем хостинге с полной поддержкой во время запуска для плавного перехода.",
+                "step6_title": "Поддержка и обслуживание",
+                "step6_desc": "Постоянная поддержка и обслуживание для бесперебойной работы вашего продукта с обновлениями и улучшениями.",
+                
+                // Contact section
+                "contact_title": "Связаться",
+                "contact_subtitle": "Давайте вместе воплотим ваше видение в жизнь",
+                "location": "Местоположение",
+                "phone": "Телефон",
+                "call_now": "Позвонить",
+                
+                // Footer
+                "footer_title": "Веб-разработчик и специалист по цифровым решениям",
+                "rights": "Все права защищены"
+            }
+        };
+
+        // Language management
+        let currentLang = 'en';
+        const toggleButton = document.getElementById('languageToggle');
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            toggleButton.textContent = lang === 'en' ? 'RU' : 'EN';
+            toggleButton.classList.toggle('active', lang === 'ru');
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    if (element.tagName === 'INPUT') {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Save language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Initialize language
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            setLanguage('en');
+        }
+        
+        // Toggle language on button click
+        toggleButton.addEventListener('click', () => {
+            setLanguage(currentLang === 'en' ? 'ru' : 'en');
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav ul').classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.backgroundColor = 'rgba(15, 15, 21, 0.98)';
+            } else {
+                header.style.padding = '20px 0';
+                header.style.backgroundColor = 'rgba(15, 15, 21, 0.95)';
+            }
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate');
+            const processSteps = document.querySelectorAll('.process-step');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.visibility = 'visible';
+                }
+            });
+            
+            // Animate process steps
+            processSteps.forEach(step => {
+                const stepPosition = step.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (stepPosition < screenPosition) {
+                    step.classList.add('animate');
+                }
+            });
+        };
+        
+        // Initialize animations
+        document.querySelectorAll('.animate').forEach(el => {
+            el.style.opacity = 0;
+            el.style.visibility = 'hidden';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Project card hover effect
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Pricing card animations
+        document.querySelectorAll('.pricing-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
