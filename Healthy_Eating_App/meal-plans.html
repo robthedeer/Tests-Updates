@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plans | NutriGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <div class="logo-text">NutriGuide</div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-container">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="meal-plans.html" class="nav-link active"><i class="fas fa-utensils"></i> Meal Plans</a></li>
+                    <li><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Nutrition</a></li>
+                    <li><a href="progress.html" class="nav-link"><i class="fas fa-chart-line"></i> Progress</a></li>
+                    <li><a href="community.html" class="nav-link"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="account.html" class="nav-link"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions" id="userActions">
+                <!-- Dynamically filled based on auth state -->
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <h1 class="section-title"><i class="fas fa-utensils"></i> Weekly Meal Plan</h1>
+        <p class="subtitle">Healthy, balanced meals designed to build strength and vitality</p>
+        
+        <div class="week-selector">
+            <div>
+                <h3>Week of <span id="currentWeek"></span></h3>
+                <p>Your meals update automatically every week</p>
+            </div>
+            <button class="btn"><i class="fas fa-download"></i> Download Plan</button>
+        </div>
+        
+        <!-- Meal Plan Preference Section -->
+        <div class="preference-card">
+            <h2><i class="fas fa-sliders-h"></i> Customize Your Meal Plan</h2>
+            
+            <div class="preference-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="diet-type">Diet Type</label>
+                        <select class="form-control" id="diet-type">
+                            <option value="balanced">Balanced</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="high-protein">High Protein</option>
+                            <option value="low-carb">Low Carb</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="calories">Daily Calories</label>
+                        <select class="form-control" id="calories">
+                            <option value="1600">1600 (Light Activity)</option>
+                            <option value="2000">2000 (Moderate Activity)</option>
+                            <option value="2400">2400 (Active Lifestyle)</option>
+                            <option value="2800">2800 (Strength Building)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="allergies">Allergies/Restrictions</label>
+                    <input type="text" class="form-control" id="allergies" placeholder="Dairy, nuts, gluten...">
+                </div>
+                
+                <button class="btn" id="generatePlan">Generate Meal Plan</button>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="planProgress"></div>
+                </div>
+                <div class="progress-text">Generating your personalized meal plan...</div>
+            </div>
+        </div>
+        
+        <div class="week-days">
+            <!-- Monday -->
+            <div class="day-card">
+                <div class="day-header">Monday</div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Breakfast</span>
+                        <span class="meal-time">8:00 AM</span>
+                    </div>
+                    <div class="meal-desc">Oatmeal with berries and almonds</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Morning Snack</span>
+                        <span class="meal-time">11:00 AM</span>
+                    </div>
+                    <div class="meal-desc">Greek yogurt with banana</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Lunch</span>
+                        <span class="meal-time">1:30 PM</span>
+                    </div>
+                    <div class="meal-desc">Quinoa salad with grilled chicken</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Afternoon Snack</span>
+                        <span class="meal-time">4:00 PM</span>
+                    </div>
+                    <div class="meal-desc">Apple with almond butter</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Dinner</span>
+                        <span class="meal-time">7:00 PM</span>
+                    </div>
+                    <div class="meal-desc">Baked salmon with roasted vegetables</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+            </div>
+            
+            <!-- Tuesday -->
+            <div class="day-card">
+                <div class="day-header">Tuesday</div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Breakfast</span>
+                        <span class="meal-time">8:00 AM</span>
+                    </div>
+                    <div class="meal-desc">Avocado toast with poached eggs</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Morning Snack</span>
+                        <span class="meal-time">11:00 AM</span>
+                    </div>
+                    <div class="meal-desc">Protein smoothie</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Lunch</span>
+                        <span class="meal-time">1:30 PM</span>
+                    </div>
+                    <div class="meal-desc">Lentil soup with whole grain bread</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Afternoon Snack</span>
+                        <span class="meal-time">4:00 PM</span>
+                    </div>
+                    <div class="meal-desc">Cottage cheese with pineapple</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+                <div class="meal-time">
+                    <div class="meal-title">
+                        <span class="meal-name">Dinner</span>
+                        <span class="meal-time">7:00 PM</span>
+                    </div>
+                    <div class="meal-desc">Turkey meatballs with zucchini noodles</div>
+                    <button class="recipe-btn"><i class="fas fa-book"></i> Recipe</button>
+                </div>
+            </div>
+            
+            <!-- Wednesday to Sunday would follow the same pattern -->
+        </div>
+        
+        <div class="fruit-section">
+            <h2 class="section-title"><i class="fas fa-apple-alt"></i> Daily Fruit Suggestions</h2>
+            <p>Incorporate these nutrient-rich fruits into your daily diet for optimal health benefits</p>
+            
+            <div class="fruit-grid">
+                <div class="fruit-card">
+                    <div class="fruit-icon">🍓</div>
+                    <div class="fruit-info">
+                        <h3>Strawberries</h3>
+                        <p>High in vitamin C and antioxidants. Boost immunity and skin health.</p>
+                    </div>
+                </div>
+                
+                <div class="fruit-card">
+                    <div class="fruit-icon">🍌</div>
+                    <div class="fruit-info">
+                        <h3>Bananas</h3>
+                        <p>Rich in potassium and vitamin B6. Great for energy and muscle function.</p>
+                    </div>
+                </div>
+                
+                <div class="fruit-card">
+                    <div class="fruit-icon">🍊</div>
+                    <div class="fruit-info">
+                        <h3>Oranges</h3>
+                        <p>Excellent source of vitamin C. Supports immune system and collagen production.</p>
+                    </div>
+                </div>
+                
+                <div class="fruit-card">
+                    <div class="fruit-icon">🥝</div>
+                    <div class="fruit-info">
+                        <h3>Kiwi</h3>
+                        <p>Packed with vitamin C, K, and fiber. Aids digestion and heart health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 NutriGuide - Healthy Eating Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/meal-plans.js"></script>
+</body>
+</html>

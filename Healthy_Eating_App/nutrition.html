@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Guide | NutriGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <div class="logo-text">NutriGuide</div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-container">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="meal-plans.html" class="nav-link"><i class="fas fa-utensils"></i> Meal Plans</a></li>
+                    <li><a href="nutrition.html" class="nav-link active"><i class="fas fa-apple-alt"></i> Nutrition</a></li>
+                    <li><a href="progress.html" class="nav-link"><i class="fas fa-chart-line"></i> Progress</a></li>
+                    <li><a href="community.html" class="nav-link"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="account.html" class="nav-link"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions" id="userActions">
+                <!-- Dynamically filled based on auth state -->
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <h1 class="section-title"><i class="fas fa-apple-alt"></i> Nutrition Guide</h1>
+        <p class="subtitle">Expert information to help you build strength through proper nutrition</p>
+        
+        <div class="expert-tips">
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div class="expert-avatar">
+                        <img src="images/nutritionist.jpg" alt="Nutrition Expert">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>Registered Dietitian & Nutrition Specialist</p>
+                    </div>
+                </div>
+                <div class="expert-content">
+                    <p>"Building strength requires a balanced approach to nutrition. Focus on getting adequate protein for muscle repair, complex carbohydrates for sustained energy, and healthy fats for hormone production. Don't neglect micronutrients - they're essential for all bodily functions."</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nutrition-cards">
+            <div class="nutrition-card">
+                <div class="card-header">Macronutrients</div>
+                <div class="card-body">
+                    <h3>Protein</h3>
+                    <p>Essential for muscle repair and growth. Aim for 1.6-2.2g per kg of body weight daily.</p>
+                    
+                    <h3>Carbohydrates</h3>
+                    <p>Primary energy source. Focus on complex carbs like whole grains, vegetables, and legumes.</p>
+                    
+                    <h3>Fats</h3>
+                    <p>Necessary for hormone production and nutrient absorption. Prioritize unsaturated fats.</p>
+                </div>
+            </div>
+            
+            <div class="nutrition-card">
+                <div class="card-header">Micronutrients</div>
+                <div class="card-body">
+                    <h3>Vitamins</h3>
+                    <p>Essential for energy production, immune function, and bone health. Focus on:</p>
+                    <ul>
+                        <li>Vitamin D: Bone health and immunity</li>
+                        <li>B Vitamins: Energy metabolism</li>
+                        <li>Vitamin C: Antioxidant and collagen production</li>
+                    </ul>
+                    
+                    <h3>Minerals</h3>
+                    <p>Crucial for muscle function and oxygen transport:</p>
+                    <ul>
+                        <li>Iron: Oxygen transport in blood</li>
+                        <li>Calcium: Bone health and muscle function</li>
+                        <li>Magnesium: Energy production and muscle relaxation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="nutrition-card">
+                <div class="card-header">Hydration</div>
+                <div class="card-body">
+                    <h3>Water Intake</h3>
+                    <p>Adequate hydration is crucial for physical performance and recovery. Aim for:</p>
+                    <ul>
+                        <li>2.5-3.5 liters per day for men</li>
+                        <li>2.0-2.7 liters per day for women</li>
+                    </ul>
+                    <p>Increase intake during exercise and in hot environments.</p>
+                    
+                    <h3>Electrolytes</h3>
+                    <p>Essential for nerve function and fluid balance. Include sodium, potassium, and magnesium in your diet.</p>
+                </div>
+            </div>
+            
+            <div class="nutrition-card">
+                <div class="card-header">Meal Timing</div>
+                <div class="card-body">
+                    <h3>Pre-Workout Nutrition</h3>
+                    <p>Consume a balanced meal 2-3 hours before exercise containing carbs and protein.</p>
+                    
+                    <h3>Post-Workout Recovery</h3>
+                    <p>Within 30-60 minutes after exercise, consume protein and carbs to aid recovery.</p>
+                    
+                    <h3>Frequency</h3>
+                    <p>Eating every 3-4 hours helps maintain energy levels and supports muscle growth.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="supplement-guide">
+            <h2 class="section-title"><i class="fas fa-capsules"></i> Supplement Guide</h2>
+            <div class="supplement-grid">
+                <div class="supplement-card">
+                    <div class="supplement-icon">💊</div>
+                    <div class="supplement-info">
+                        <h3>Whey Protein</h3>
+                        <p>Convenient source of high-quality protein for muscle recovery.</p>
+                    </div>
+                </div>
+                
+                <div class="supplement-card">
+                    <div class="supplement-icon">💊</div>
+                    <div class="supplement-info">
+                        <h3>Creatine</h3>
+                        <p>Supports strength gains and muscle growth. Well-researched and safe.</p>
+                    </div>
+                </div>
+                
+                <div class="supplement-card">
+                    <div class="supplement-icon">💊</div>
+                    <div class="supplement-info">
+                        <h3>Omega-3 Fatty Acids</h3>
+                        <p>Reduces inflammation and supports heart and brain health.</p>
+                    </div>
+                </div>
+                
+                <div class="supplement-card">
+                    <div class="supplement-icon">💊</div>
+                    <div class="supplement-info">
+                        <h3>Vitamin D</h3>
+                        <p>Essential for bone health and immune function, especially in winter months.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 NutriGuide - Healthy Eating Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

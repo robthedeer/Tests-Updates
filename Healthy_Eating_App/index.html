@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide | Healthy Eating Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <div class="logo-text">NutriGuide</div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-container">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="meal-plans.html" class="nav-link"><i class="fas fa-utensils"></i> Meal Plans</a></li>
+                    <li><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Nutrition</a></li>
+                    <li><a href="progress.html" class="nav-link"><i class="fas fa-chart-line"></i> Progress</a></li>
+                    <li><a href="community.html" class="nav-link"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="account.html" class="nav-link"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions" id="userActions">
+                <button class="btn btn-small" id="loginBtn">Login</button>
+                <button class="btn btn-secondary btn-small" id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Transform Your Health, <span>Build Your Strength</span></h1>
+                <p>Personalized nutrition plans designed for those who want to overcome weakness and build lasting vitality. Your journey to a stronger, healthier you starts with what's on your plate.</p>
+                <div class="quote">
+                    "Strength doesn't come from what you can do. It comes from overcoming the things you once thought you couldn't." - Rikki Rogers
+                </div>
+                <a href="meal-plans.html" class="btn">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-food.jpg" alt="Healthy food variety">
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🥗</div>
+                <h3>Personalized Plans</h3>
+                <p>Meal plans tailored to your taste preferences, dietary needs, and health goals.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⏱️</div>
+                <h3>Optimal Meal Timing</h3>
+                <p>Strategically timed meals to maximize energy and nutrient absorption.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Progress Tracking</h3>
+                <p>Monitor your nutritional intake and strength gains with our dashboard.</p>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2 class="section-title"><i class="fas fa-comments"></i> Success Stories</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "After years of feeling weak and fatigued, NutriGuide helped me understand how to fuel my body properly. I've gained 8kg of muscle in 6 months!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="avatar">MJ</div>
+                        <div class="author-info">
+                            <h4>Michael Johnson</h4>
+                            <p>Transformed in 6 months</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The personalized meal plans consider my taste preferences and busy schedule. I've never been able to stick to a nutrition plan before this!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="avatar">SP</div>
+                        <div class="author-info">
+                            <h4>Sarah Peterson</h4>
+                            <p>User for 1 year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 NutriGuide - Healthy Eating Planner. All rights reserved.</p>
+        <p>Designed for strength building and optimal nutrition</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

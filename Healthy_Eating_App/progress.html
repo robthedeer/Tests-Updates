@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking | NutriGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <div class="logo-text">NutriGuide</div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-container">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="meal-plans.html" class="nav-link"><i class="fas fa-utensils"></i> Meal Plans</a></li>
+                    <li><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Nutrition</a></li>
+                    <li><a href="progress.html" class="nav-link active"><i class="fas fa-chart-line"></i> Progress</a></li>
+                    <li><a href="community.html" class="nav-link"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="account.html" class="nav-link"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions" id="userActions">
+                <!-- Dynamically filled based on auth state -->
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <h1 class="section-title"><i class="fas fa-chart-line"></i> Your Progress</h1>
+        <p class="subtitle">Track your journey to better health and strength</p>
+        
+        <div class="progress-overview">
+            <div class="metric-card">
+                <div class="metric-value">16</div>
+                <div class="metric-label">Days Streak</div>
+                <div class="metric-icon"><i class="fas fa-fire"></i></div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">87%</div>
+                <div class="metric-label">Meal Compliance</div>
+                <div class="metric-icon"><i class="fas fa-utensils"></i></div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">+2.3kg</div>
+                <div class="metric-label">Muscle Gain</div>
+                <div class="metric-icon"><i class="fas fa-weight"></i></div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">4.5</div>
+                <div class="metric-label">Avg. Energy Level</div>
+                <div class="metric-icon"><i class="fas fa-bolt"></i></div>
+            </div>
+        </div>
+        
+        <div class="progress-section">
+            <h2 class="section-subtitle"><i class="fas fa-weight"></i> Weight Progress</h2>
+            <div class="progress-chart">
+                <canvas id="weightChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="progress-section">
+            <h2 class="section-subtitle"><i class="fas fa-apple-alt"></i> Nutrition Compliance</h2>
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <h3>Protein</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 92%; background: var(--primary);"></div>
+                    </div>
+                    <div class="progress-value">92% of goal</div>
+                </div>
+                
+                <div class="compliance-card">
+                    <h3>Carbs</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%; background: var(--secondary);"></div>
+                    </div>
+                    <div class="progress-value">85% of goal</div>
+                </div>
+                
+                <div class="compliance-card">
+                    <h3>Fats</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 78%; background: var(--accent);"></div>
+                    </div>
+                    <div class="progress-value">78% of goal</div>
+                </div>
+                
+                <div class="compliance-card">
+                    <h3>Vegetables</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%; background: var(--success);"></div>
+                    </div>
+                    <div class="progress-value">65% of goal</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-section">
+            <h2 class="section-subtitle"><i class="fas fa-trophy"></i> Strength Milestones</h2>
+            <div class="milestones-grid">
+                <div class="milestone-card completed">
+                    <div class="milestone-icon"><i class="fas fa-check"></i></div>
+                    <h3>7-Day Streak</h3>
+                    <p>Completed 7 consecutive days</p>
+                    <div class="milestone-date">Achieved: Oct 12, 2023</div>
+                </div>
+                
+                <div class="milestone-card completed">
+                    <div class="milestone-icon"><i class="fas fa-check"></i></div>
+                    <h3>Protein Master</h3>
+                    <p>Met protein goals 5 days in a row</p>
+                    <div class="milestone-date">Achieved: Oct 18, 2023</div>
+                </div>
+                
+                <div class="milestone-card">
+                    <div class="milestone-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>Strength Builder</h3>
+                    <p>Increase strength by 10%</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 70%;"></div>
+                    </div>
+                    <div class="progress-value">70% complete</div>
+                </div>
+                
+                <div class="milestone-card">
+                    <div class="milestone-icon"><i class="fas fa-weight"></i></div>
+                    <h3>Muscle Gain</h3>
+                    <p>Gain 2kg of muscle</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 50%;"></div>
+                    </div>
+                    <div class="progress-value">50% complete</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="journal-section">
+            <h2 class="section-subtitle"><i class="fas fa-book"></i> Wellness Journal</h2>
+            <div class="journal-entry">
+                <div class="entry-header">
+                    <div class="entry-date">October 20, 2023</div>
+                    <div class="entry-mood">😊 Good</div>
+                </div>
+                <div class="entry-content">
+                    <p>Felt energetic throughout the day. Completed all meals as planned. Workout was strong - increased weights on squats and bench press. Sleeping better since starting the meal plan.</p>
+                </div>
+            </div>
+            
+            <div class="journal-entry">
+                <div class="entry-header">
+                    <div class="entry-date">October 18, 2023</div>
+                    <div class="entry-mood">😐 Average</div>
+                </div>
+                <div class="entry-content">
+                    <p>Missed my afternoon snack due to meetings. Felt a bit sluggish in the evening. Need to plan better for busy workdays. Still managed to hit protein goals.</p>
+                </div>
+            </div>
+            
+            <button class="btn" id="addJournalBtn"><i class="fas fa-plus"></i> Add Journal Entry</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 NutriGuide - Healthy Eating Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/progress.js"></script>
+</body>
+</html>

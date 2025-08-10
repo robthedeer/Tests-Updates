@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings | NutriGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <div class="logo-text">NutriGuide</div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-container">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="meal-plans.html" class="nav-link"><i class="fas fa-utensils"></i> Meal Plans</a></li>
+                    <li><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Nutrition</a></li>
+                    <li><a href="progress.html" class="nav-link"><i class="fas fa-chart-line"></i> Progress</a></li>
+                    <li><a href="community.html" class="nav-link"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="account.html" class="nav-link active"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions" id="userActions">
+                <!-- Dynamically filled based on auth state -->
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <h1 class="section-title"><i class="fas fa-user"></i> Account Settings</h1>
+        
+        <div class="account-container">
+            <div class="account-sidebar">
+                <div class="account-profile">
+                    <div class="profile-avatar">
+                        <div class="avatar">U</div>
+                        <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-name">John Smith</div>
+                        <div class="profile-email">john.smith@example.com</div>
+                    </div>
+                </div>
+                
+                <div class="account-menu">
+                    <a href="#" class="menu-item active"><i class="fas fa-user-cog"></i> Personal Info</a>
+                    <a href="#" class="menu-item"><i class="fas fa-lock"></i> Security</a>
+                    <a href="#" class="menu-item"><i class="fas fa-bell"></i> Notifications</a>
+                    <a href="#" class="menu-item"><i class="fas fa-heart"></i> Preferences</a>
+                    <a href="#" class="menu-item"><i class="fas fa-credit-card"></i> Subscription</a>
+                    <a href="#" class="menu-item"><i class="fas fa-question-circle"></i> Help Center</a>
+                </div>
+            </div>
+            
+            <div class="account-content">
+                <div class="account-card">
+                    <h2><i class="fas fa-user-cog"></i> Personal Information</h2>
+                    
+                    <form class="account-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" class="form-control" id="first-name" value="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" class="form-control" id="last-name" value="Smith">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" value="john.smith@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" value="New York, USA">
+                        </div>
+                        
+                        <button class="btn">Update Profile</button>
+                    </form>
+                </div>
+                
+                <div class="account-card">
+                    <h2><i class="fas fa-credit-card"></i> Subscription</h2>
+                    
+                    <div class="subscription-status">
+                        <div class="status-card premium">
+                            <div class="status-icon"><i class="fas fa-crown"></i></div>
+                            <div class="status-info">
+                                <div class="status-title">Premium Membership</div>
+                                <div class="status-detail">Active until Nov 15, 2023</div>
+                            </div>
+                        </div>
+                        
+                        <div class="subscription-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Plan</div>
+                                <div class="detail-value">Premium Monthly</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Price</div>
+                                <div class="detail-value">$9.99/month</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Next Payment</div>
+                                <div class="detail-value">Nov 15, 2023</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Payment Method</div>
+                                <div class="detail-value">VISA **** 1234</div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-secondary"><i class="fas fa-credit-card"></i> Update Payment Method</button>
+                        <button class="btn"><i class="fas fa-times"></i> Cancel Subscription</button>
+                    </div>
+                </div>
+                
+                <div class="account-card">
+                    <h2><i class="fas fa-heart"></i> Dietary Preferences</h2>
+                    
+                    <form class="preferences-form">
+                        <div class="form-group">
+                            <label>Diet Type</label>
+                            <div class="preference-options">
+                                <label class="option">
+                                    <input type="radio" name="diet-type" checked>
+                                    <span>Balanced</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="diet-type">
+                                    <span>Vegetarian</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="diet-type">
+                                    <span>Vegan</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="diet-type">
+                                    <span>High Protein</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="diet-type">
+                                    <span>Low Carb</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Allergies & Restrictions</label>
+                            <div class="preference-options">
+                                <label class="option">
+                                    <input type="checkbox">
+                                    <span>Dairy</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" checked>
+                                    <span>Nuts</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox">
+                                    <span>Gluten</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox">
+                                    <span>Shellfish</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox">
+                                    <span>Soy</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Taste Preferences</label>
+                            <div class="preference-options">
+                                <label class="option">
+                                    <input type="checkbox" checked>
+                                    <span>Savory</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" checked>
+                                    <span>Sweet</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox">
+                                    <span>Spicy</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" checked>
+                                    <span>Mild</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="btn">Save Preferences</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 NutriGuide - Healthy Eating Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

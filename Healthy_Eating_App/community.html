@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | NutriGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <div class="logo-text">NutriGuide</div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-container">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="meal-plans.html" class="nav-link"><i class="fas fa-utensils"></i> Meal Plans</a></li>
+                    <li><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Nutrition</a></li>
+                    <li><a href="progress.html" class="nav-link"><i class="fas fa-chart-line"></i> Progress</a></li>
+                    <li><a href="community.html" class="nav-link active"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="account.html" class="nav-link"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions" id="userActions">
+                <!-- Dynamically filled based on auth state -->
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <h1 class="section-title"><i class="fas fa-users"></i> Community</h1>
+        <p class="subtitle">Connect, share, and learn with others on their health journey</p>
+        
+        <div class="community-container">
+            <div class="community-main">
+                <div class="post-form">
+                    <div class="user-avatar">
+                        <div class="avatar">U</div>
+                    </div>
+                    <div class="post-input">
+                        <textarea placeholder="Share your progress, ask a question, or encourage others..."></textarea>
+                        <button class="btn"><i class="fas fa-paper-plane"></i> Post</button>
+                    </div>
+                </div>
+                
+                <div class="posts-container">
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">
+                                <div class="avatar">MJ</div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">Michael Johnson</div>
+                                <div class="post-time">2 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            Just completed my first month with NutriGuide and I've already gained 2kg of muscle! The meal plans are delicious and easy to follow. Feeling stronger every day 💪
+                        </div>
+                        <div class="post-stats">
+                            <div class="post-likes"><i class="fas fa-thumbs-up"></i> 24</div>
+                            <div class="post-comments"><i class="fas fa-comment"></i> 5 comments</div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn btn-small"><i class="fas fa-thumbs-up"></i> Like</button>
+                            <button class="btn btn-small"><i class="fas fa-comment"></i> Comment</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">
+                                <div class="avatar">SP</div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">Sarah Peterson</div>
+                                <div class="post-time">5 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            Does anyone have recommendations for high-protein vegetarian meals? I'm struggling to meet my protein goals without meat.
+                        </div>
+                        <div class="post-stats">
+                            <div class="post-likes"><i class="fas fa-thumbs-up"></i> 12</div>
+                            <div class="post-comments"><i class="fas fa-comment"></i> 8 comments</div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn btn-small"><i class="fas fa-thumbs-up"></i> Like</button>
+                            <button class="btn btn-small"><i class="fas fa-comment"></i> Comment</button>
+                        </div>
+                        
+                        <div class="comments-container">
+                            <div class="comment">
+                                <div class="user-avatar">
+                                    <div class="avatar">DR</div>
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <div class="comment-user">David Rodriguez</div>
+                                        <div class="comment-time">4 hours ago</div>
+                                    </div>
+                                    <div class="comment-text">
+                                        Try lentil curry with quinoa - it's packed with protein! Also, tofu scrambles for breakfast are great.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">
+                                <div class="avatar">TL</div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">Taylor Lopez</div>
+                                <div class="post-time">1 day ago</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            Just hit a new personal record on my bench press! 10kg more than last month. Consistent nutrition really does make a difference. Thanks to everyone who shared their meal prep tips last week!
+                            <div class="post-image">
+                                <img src="images/bench-press.jpg" alt="Bench press achievement">
+                            </div>
+                        </div>
+                        <div class="post-stats">
+                            <div class="post-likes"><i class="fas fa-thumbs-up"></i> 42</div>
+                            <div class="post-comments"><i class="fas fa-comment"></i> 15 comments</div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn btn-small"><i class="fas fa-thumbs-up"></i> Like</button>
+                            <button class="btn btn-small"><i class="fas fa-comment"></i> Comment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="community-sidebar">
+                <div class="community-card">
+                    <h2><i class="fas fa-calendar"></i> Upcoming Events</h2>
+                    <div class="event-list">
+                        <div class="event">
+                            <div class="event-date">Oct 28</div>
+                            <div class="event-info">
+                                <div class="event-title">Nutrition Workshop</div>
+                                <div class="event-time">3:00 PM EST</div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-date">Nov 5</div>
+                            <div class="event-info">
+                                <div class="event-title">Meal Prep Challenge</div>
+                                <div class="event-time">All Day</div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-date">Nov 12</div>
+                            <div class="event-info">
+                                <div class="event-title">Q&A with Nutritionist</div>
+                                <div class="event-time">6:00 PM EST</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn" style="width: 100%; margin-top: 15px;">View All Events</button>
+                </div>
+                
+                <div class="community-card">
+                    <h2><i class="fas fa-trophy"></i> Top Contributors</h2>
+                    <div class="contributors-list">
+                        <div class="contributor">
+                            <div class="user-avatar">
+                                <div class="avatar">MJ</div>
+                            </div>
+                            <div class="contributor-info">
+                                <div class="contributor-name">Michael Johnson</div>
+                                <div class="contributor-posts">125 posts</div>
+                            </div>
+                        </div>
+                        <div class="contributor">
+                            <div class="user-avatar">
+                                <div class="avatar">SP</div>
+                            </div>
+                            <div class="contributor-info">
+                                <div class="contributor-name">Sarah Peterson</div>
+                                <div class="contributor-posts">98 posts</div>
+                            </div>
+                        </div>
+                        <div class="contributor">
+                            <div class="user-avatar">
+                                <div class="avatar">DR</div>
+                            </div>
+                            <div class="contributor-info">
+                                <div class="contributor-name">David Rodriguez</div>
+                                <div class="contributor-posts">76 posts</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="community-card">
+                    <h2><i class="fas fa-hashtag"></i> Popular Topics</h2>
+                    <div class="topics-list">
+                        <div class="topic">#MealPrep</div>
+                        <div class="topic">#VegetarianGains</div>
+                        <div class="topic">#StrengthJourney</div>
+                        <div class="topic">#HealthyRecipes</div>
+                        <div class="topic">#NutritionTips</div>
+                        <div class="topic">#ProgressUpdate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 NutriGuide - Healthy Eating Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
